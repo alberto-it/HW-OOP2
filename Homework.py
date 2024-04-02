@@ -3,7 +3,7 @@ class BudgetCategory:
     def __init__(self, category_name, allocated_budget):
         self.__category_name = category_name 
         self.__allocated_budget = allocated_budget
-        self.remaining_budget = self.__allocated_budget
+        self.__remaining_budget = self.__allocated_budget
 
 # Task 2: Implement Getters and Setters
     def get_category_name(self):
@@ -21,14 +21,14 @@ class BudgetCategory:
 
 # Task 3: Add Budget Functionality
     def add_expense(self, amount):
-        if self.remaining_budget >= amount: self.remaining_budget -= amount
+        if self.__remaining_budget >= amount: self.__remaining_budget -= amount
         else: print("\nExpense Not Added (Insufficient Funds Remaining in the Budget)!")
 
 # Task 4: Display Budget Details
     def display_category_summary(self):
         print(f"\nCategory: {self.get_category_name()}")
         print(f"Allocated Budget: ${self.get_allocated_budget():.2f}")
-        print(f"Remaining Budget: ${self.remaining_budget:.2f}\n")
+        print(f"Remaining Budget: ${self.__remaining_budget:.2f}\n")
 
 # Example usage
 food_category = BudgetCategory("Food", 500)
