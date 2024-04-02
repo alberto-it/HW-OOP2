@@ -26,7 +26,6 @@ class BudgetCategory:
 
 # Task 4: Display Budget Details
     def display_category_summary(self):
-        remaining_budget = self.get_allocated_budget()
         print(f"\nCategory: {self.get_category_name()}")
         print(f"Allocated Budget: ${self.get_allocated_budget():.2f}")
         print(f"Remaining Budget: ${self.remaining_budget:.2f}\n")
